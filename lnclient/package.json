@@ -11,19 +11,13 @@
   "author": "Bruwbird",
   "license": "ISC",
   "dependencies": {
-    "bigi": "^1.4.2",
-    "bitcoinjs-lib": "^3.3.2",
-    "buffer": "^5.1.0",
     "css-loader": "^0.28.11",
     "dhttp": "^2.4.2",
     "express": "^4.16.3",
     "moment": "^2.22.1",
     "request": "^2.85.0",
     "underscore": "^1.8.3",
-    "v-qrcode": "^1.0.3",
     "vue": "^2.5.13",
-    "vue-clipboard2": "^0.1.0",
-    "vue-qrcode-reader": "^0.7.2",
     "webpack-cli": "^2.0.10"
   },
   "devDependencies": {

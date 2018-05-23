@@ -10,9 +10,7 @@
 
 
 <script>
-var Send = require('./tabs/send.vue').default;
-var Receive = require('./tabs/receive.vue').default;
-var Setting = require('./tabs/setting.vue').default;
+var participants = require('./tabs/participants.vue').default;
 
 export default {
   template: '#main',
@@ -21,27 +19,14 @@ export default {
       activeIndex: 0,
       tabs: [
         {
-          icon: this.md() ? null : 'ion-share',
-          page: Send,
-          label: 'Send'
-        },
-        {
-          icon: this.md() ? null : 'ion-archive',
-          page: Receive,
-          label: 'Receive'
-        },
-        {
-          icon: this.md() ? null : 'ion-gear-b',
-          page: Setting,
-          label: 'Setting'
+          icon: this.md() ? null : 'building',
+          page: participants,
         }
       ]
     };
   },
   components : {
-    Send
-    ,Receive
-    ,Setting
+    participants
   },
   methods: {
     md() {
