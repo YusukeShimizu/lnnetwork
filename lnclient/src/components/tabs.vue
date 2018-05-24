@@ -11,6 +11,8 @@
 
 <script>
 var participants = require('./tabs/participants.vue').default;
+var assets = require('./tabs/assets.vue').default;
+var transactions = require('./tabs/transactions.vue').default;
 
 export default {
   template: '#main',
@@ -20,13 +22,23 @@ export default {
       tabs: [
         {
           icon: this.md() ? null : 'building',
-          page: participants,
+          page: participants
+        },
+        {
+          icon: this.md() ? null : 'book',
+          page: assets
+        },
+        {
+          icon: this.md() ? null : 'edit',
+          page: transaction
         }
       ]
     };
   },
   components : {
-    participants
+    participants,
+    assets,
+    transactions
   },
   methods: {
     md() {
