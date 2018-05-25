@@ -11,14 +11,21 @@
         </li>
         <li class="list-item list-item--material" v-for="(LC, index) in LClists">
           <div class="list-item__center list-item--material__center nocomplete">
-            <v-ons-row>
-              <v-ons-col width="150px">{{ receivelist.value }} BTC　(完了)</v-ons-col>
-              <v-ons-col>時間：{{ receivelist.received }}</v-ons-col>
-            </v-ons-row>
+            <div v-for="(value, key) in LC">
+              <v-ons-row>
+                <v-ons-col>{{ index }}. {{ key }}: {{ value }}</v-ons-col>
+              </v-ons-row>
+            </div>
           </div>
         </li>
       </ul>
     </div>
+    <v-ons-fab
+      position="bottom right"
+      :visible="fabVisible"
+    >
+      <v-ons-icon icon="plus-square"></v-ons-icon>
+    </v-ons-fab>
   </v-ons-page>
 </template>
 
