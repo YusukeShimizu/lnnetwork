@@ -6,23 +6,38 @@
 
     <div>
       <ul class="list list--material">
-        <li class="list-item list-item--material" v-for="(lists, index) in lists.Banks">
+        <li class="list-header list-header--material">
+          Banks
+        </li>
+        <li class="list-item list-item--material" v-for="(Bank, index) in lists.Banks">
           <div class="list-item__center list-item--material__center nocomplete">
-            <v-ons-row>
-            </v-ons-row>
+            <div v-for="(value, key) in Bank">
+              <v-ons-row>
+                {{ index }}. {{ key }}: {{ value }}
+              </v-ons-row>
+            </div>
           </div>
         </li>
-        <li class="list-item list-item--material" v-for="(lists, index) in lists.Companies">
+        <li class="list-header list-header--material">
+          Companies
+        </li>
+        <li class="list-item list-item--material" v-for="(Company, index) in lists.Companies">
           <div class="list-item__center list-item--material__center nocomplete">
-            <v-ons-row>
-            </v-ons-row>
+            <div v-for="(value, key) in Bank">
+              <v-ons-row>
+                {{ index }}. {{ key }}: {{ value }}
+              </v-ons-row>
+            </div>
           </div>
         </li>
-
       </ul>
     </div>
-
- 
+    <v-ons-fab
+      position="bottom right"
+      :visible="fabVisible"
+    >
+      <v-ons-icon icon="plus-square"></v-ons-icon>
+    </v-ons-fab>
   </v-ons-page>
 </template>
 
@@ -30,7 +45,6 @@
 var eventBus = require('../../eventBus.js');
 var lnConnectionInfo = require('../../services/lnConnectionInfo.js');
 var lnConnection;
-
 export default {
   data () {
     return {
