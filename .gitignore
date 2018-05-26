@@ -9,4 +9,4 @@ fabric-dev-servers/
 lnnetwork/
 
 # ignore compiled
-client/Public/bundle.*
+lnclient/Public/bundle.*
