@@ -4,7 +4,7 @@ function lnConnection(){
     return new lnConnection();
   }
 
-  this.URL = 'http://883ace79.ngrok.io/api/org.acme.lcnetwork';
+  this.URL = 'http://17b92687.ngrok.io/api/org.acme.lcnetwork';
   this.dhttp = require('dhttp/200');
 
 }
