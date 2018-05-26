@@ -16,7 +16,7 @@
 
 <script>
 var eventBus = require('../../eventBus.js');
-var issuePage = require('./transactions/issue.vue').default;
+var issuePage = require('./transactions/issues.vue').default;
 
 module.exports = {
   template : "#transactions",

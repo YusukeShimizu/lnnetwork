@@ -30,7 +30,7 @@ export default {
         },
         {
           icon: this.md() ? null : 'edit',
-          page: transaction
+          page: transactions
         }
       ]
     };

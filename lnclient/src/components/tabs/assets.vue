@@ -10,13 +10,7 @@
           LC
         </li>
         <li class="list-item list-item--material" v-for="(LC, index) in LClists">
-          <div class="list-item__center list-item--material__center nocomplete">
-            <div v-for="(value, key) in LC">
-              <v-ons-row>
-                <v-ons-col>{{ index }}. {{ key }}: {{ value }}</v-ons-col>
-              </v-ons-row>
-            </div>
-          </div>
+          {{LC}}
         </li>
       </ul>
     </div>
@@ -36,8 +30,9 @@ var lnConnection;
 export default {
   data () {
     return {
-      lists : [],
-      background: '#1f1f2100'
+      LClists : [],
+      background: '#1f1f2100',
+      fabVisible: true
     }
   },
   beforeCreate : function(){
@@ -45,7 +40,7 @@ export default {
   },
   created : function(){
     var self = this;
-    this.lnConnection.get("Asset", function(res){
+    this.lnConnection.get("LC", function(res){
       self.LClists = res;
     });
   },

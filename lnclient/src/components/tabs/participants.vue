@@ -10,24 +10,16 @@
           Banks
         </li>
         <li class="list-item list-item--material" v-for="(Bank, index) in lists.Banks">
-          <div class="list-item__center list-item--material__center nocomplete">
-            <div v-for="(value, key) in Bank">
-              <v-ons-row>
-                {{ index }}. {{ key }}: {{ value }}
-              </v-ons-row>
-            </div>
+          <div class="list-item__center list-item--material__center nocomplete" v-for="(value, key) in Bank">
+            {{ key }}: {{ value }} 
           </div>
         </li>
         <li class="list-header list-header--material">
           Companies
         </li>
         <li class="list-item list-item--material" v-for="(Company, index) in lists.Companies">
-          <div class="list-item__center list-item--material__center nocomplete">
-            <div v-for="(value, key) in Bank">
-              <v-ons-row>
-                {{ index }}. {{ key }}: {{ value }}
-              </v-ons-row>
-            </div>
+          <div class="list-item__center list-item--material__center nocomplete" v-for="(value, key) in Company">
+            {{ key }}: {{ value }}  
           </div>
         </li>
       </ul>
@@ -52,6 +44,7 @@ export default {
         Banks : [],
         Companies : []
       },
+      fabVisible: true,
       background: '#1f1f2100'
     }
   },
