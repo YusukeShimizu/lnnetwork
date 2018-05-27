@@ -35,11 +35,11 @@ module.exports = {
   },
   methods : {
     goIssuePage(){
-      this.transactionsScreenShow = false;
+      this.transactionsShow = false;
       this.issueScreenShow = true;
     },
     getback(){
-      this.settingScreenShow = true;
+      this.transactionsShow = true;
       this.issueScreenShow = false;
     }
   },
