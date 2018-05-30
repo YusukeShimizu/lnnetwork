@@ -9,7 +9,9 @@
         <v-ons-list-item>
           <a href="http://17b92687.ngrok.io/explorer/" target="_blank">Hyperledger Composer REST server</a>
         </v-ons-list-item>
-
+        <v-ons-list-item>
+          <a href="https://github.com/YusukeShimizu/lnnetwork" target="_blank">View on github</a>
+        </v-ons-list-item>
       </v-ons-list>
     </div>
     <div v-show="issueScreenShow">
